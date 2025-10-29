@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YE LYNN OO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-theme">
+    <header>
+        <div class="container header-content">
+            <h1 id="site-title"> <i class="fas fa-code"></i></h1>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- <li><a href="#projects">Projects</a></li> -->
+                </ul>
+            </nav>
+            <div class="controls">
+                <button id="theme-toggle" class="control-btn"><i class="fas fa-moon"></i></button>
+                <button id="language-toggle" class="control-btn" data-lang="jp">JP / EN</button>
+                <button id="hamburger-menu" class="control-btn menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="intro-section full-width">
+            <div class="container intro-content">
+                <div class="my-name">
+                    <p class="intro-tagline" data-en="Hello, I'm" data-jp="こんにちは、私は"></p>
+                    <h2 class="name" data-en="YE LYNN OO" data-jp="イェ リン オーです">Your Full Name</h2>
+                    <p class="tagline" data-en="A Developer Driven by Passion and Innovation" data-jp="情熱と革新に突き動かされる開発者">
+                        A Developer Driven by Passion and Innovation</p>
+                    <p class="intro-paragraph"
+                        data-en="Welcome to my portfolio! I'm currently building my skills and exploring new technologies as I grow as a developer. Here, you'll find my progress, interests, and what I'm working on next."
+                        data-jp="私のポートフォリオへようこそ！現在、開発者として成長するために新しい技術を学び、スキルを磨いています。ここでは、私の成長過程や興味のある分野をご紹介します。"></p>
+                </div>
+                <div class="intro-image"> <img src="images/profile.jpg" alt="Your Photo">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section full-width">
+            <div class="container">
+                <h2 data-en="About Me" data-jp="私について">About Me</h2>
+                <p id="about-bio" data-en="about_bio_en" data-jp="about_bio_jp">
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section full-width">
+            <div class="container">
+                <h2 data-en="Skills" data-jp="スキル">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <span data-en="HTML / CSS" data-jp="HTML / CSS">HTML / CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-laptop"></i>
+                        <span data-en="JavaScript" data-jp="JavaScript">JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <span data-en="Java" data-jp="Java">Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span data-en="Database Management" data-jp="データベース管理">Database Management</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <span data-en="Git Version Control" data-jp="Gitバージョン管理">Git Version Control</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages" class="languages-section full-width">
+            <div class="container">
+                <h2 data-en="Language Ability" data-jp="言語能力">Language Ability</h2>
+                <div class="language-bars">
+                    <div class="lang-item">
+                        <span class="lang-name" data-en="Japanese" data-jp="日本語">Japanese</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill advanced"><span data-en="JLPT N2 Certified"
+                                    data-jp="JLPT N2認定">JLPT N2 Certified</span></div>
+                        </div>
+                    </div>
+                    <div class="lang-item">
+                        <span class="lang-name" data-en="English" data-jp="英語">English</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill fluent"><span data-en="Fluent" data-jp="流暢">Fluent</span></div>
+                        </div>
+                    </div>
+                    <div class="lang-item">
+                        <span class="lang-name" data-en="Myanmar" data-jp="ミャンマー語">Myanmar</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill native"><span data-en="Native" data-jp="母語">Native</span></div>
+                        </div>
+                    </div>
+                    <div class="lang-item">
+                        <span class="lang-name" data-en="Nepali" data-jp="ネパール語">Nepali</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill fluent"><span data-en="Fluent" data-jp="流暢">Fluent</span></div>
+                        </div>
+                    </div>
+                    <div class="lang-item">
+                        <span class="lang-name" data-en="Hindi" data-jp="ヒンディー語">Hindi</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill intermediate"><span data-en="Intermediate"
+                                    data-jp="中級">Intermediate</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="projects" class="screenshots-section full-width">
+            <div class="container">
+                <h2 data-en="Projects" data-jp="プロジェクト">Projects</h2>
+                <div class="screenshot-grid">
+                    <div class="project-card">
+                        <a href="projects/project1.png" target="_blank">
+                            <img src="projects/project1.png" alt="Project Screenshot 1">
+                        </a>
+                        <p class="project-name" data-en="Project One" data-jp="プロジェクト1"></p>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/screenshot3.jpg" alt="Project Screenshot 3">
+                        <p class="project-name" data-en="Project Three" data-jp="プロジェクト3"></p>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/screenshot2.jpg" alt="Project Screenshot 2">
+                        <p class="project-name" data-en="Project Two" data-jp="プロジェクト2"></p>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/screenshot4.jpg" alt="Project Screenshot 4">
+                        <p class="project-name" data-en="Project Four" data-jp="プロジェクト4"></p>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/screenshot5.jpg" alt="Project Screenshot 5">
+                        <p class="project-name" data-en="Project Five" data-jp="プロジェクト5"></p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="youtube" class="youtube-section full-width">
+            <div class="container">
+                <h2 data-en="Speech Contest Video" data-jp="スピーチコンテストの動画">My Speech Contest Video</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9B15-qTmn60?si=7u-P_rVXUG5kT3Dq"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section full-width">
+            <div class="container">
+                <h2 data-en="Contact Me" data-jp="連絡先">Contact Me</h2>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <span data-en="Email:" data-jp="メール：">Email:</span> <a
+                            href="mailto:yelynnoo.dev@gmail.com">yelynnoo.dev@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <span data-en="Phone:" data-jp="電話：">Phone:</span> <a
+                            href="tel:+8107091484124">+81 070 9148 4124</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-en="Location: Osaka, Japan"
+                            data-jp="住所：日本、大阪">Location: Osaka, Japan</span></p>
+                    <p><i class="fab fa-github"></i> <span data-en="GitHub:" data-jp="GitHub:">GitHub:</span> <a
+                            href="https://github.com/yelynnoo-dev" target="_blank">yelynnoo-dev</a></p>
+                </div>
+                <a href="yelynnoo.pdf" download="yelynnoo.pdf" class="download-cv-btn" data-en="Resume" data-jp="履歴書">Download
+                    CV</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Copyright &copy; <span id="current-year"></span> <span data-en="YE LYNN OO - All Rights Reserved"
+                    data-jp="YE LYNN OO - All Rights Reserved">YE LYNN OO - All Rights Reserved</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
