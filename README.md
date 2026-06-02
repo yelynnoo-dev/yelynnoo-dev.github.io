@@ -1,1 +1,0 @@
-# yelynnoo.github.io

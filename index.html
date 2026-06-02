@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YE LYNN OO</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;700&family=Syne:wght@400;700;800&family=Klee+One&display=swap" rel="stylesheet">
 </head>
-
 <body class="light-theme">
-    <header>
+
+    <!-- HEADER -->
+    <header id="site-header">
         <div class="container header-content">
-            <h1 id="site-title"> <i class="fas fa-code"></i></h1>
+            <a href="#home" class="logo-link">
+                <span class="logo-bracket">&lt;</span><span class="logo-bracket">/&gt;</span>
+            </a>
             <nav class="main-nav" id="main-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <!-- <li><a href="#projects">Projects</a></li> -->
+                    <li><a href="#home" data-en="Home" data-jp="ホーム">Home</a></li>
+                    <li><a href="#about" data-en="About" data-jp="私について">About</a></li>
+                    <li><a href="#skills" data-en="Skills" data-jp="スキル">Skills</a></li>
+                    <li><a href="#highlights" data-en="Highlights" data-jp="実績">Highlights</a></li>
+                    <li><a href="#contact" data-en="Contact" data-jp="連絡先">Contact</a></li>
                 </ul>
             </nav>
             <div class="controls">
-                <button id="theme-toggle" class="control-btn"><i class="fas fa-moon"></i></button>
-                <button id="language-toggle" class="control-btn" data-lang="jp">JP / EN</button>
-                <button id="hamburger-menu" class="control-btn menu-btn">
+                <button id="theme-toggle" class="control-btn" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+                <button id="language-toggle" class="control-btn lang-btn" data-lang="en">JP</button>
+                <button id="hamburger-menu" class="control-btn menu-btn" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -36,164 +38,248 @@
     </header>
 
     <main>
-        <section id="home" class="intro-section full-width">
-            <div class="container intro-content">
-                <div class="my-name">
-                    <p class="intro-tagline" data-en="Hello, I'm" data-jp="こんにちは、私は"></p>
-                    <h2 class="name" data-en="YE LYNN OO" data-jp="イェ リン オーです">Your Full Name</h2>
-                    <p class="tagline" data-en="A Developer Driven by Passion and Innovation" data-jp="情熱と革新に突き動かされる開発者">
-                        A Developer Driven by Passion and Innovation</p>
-                    <p class="intro-paragraph"
-                        data-en="Welcome to my portfolio! I'm currently building my skills and exploring new technologies as I grow as a developer. Here, you'll find my progress, interests, and what I'm working on next."
-                        data-jp="私のポートフォリオへようこそ！現在、開発者として成長するために新しい技術を学び、スキルを磨いています。ここでは、私の成長過程や興味のある分野をご紹介します。"></p>
+        <!-- HERO -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg-grid"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting animate-in" data-en="Hello, I'm" data-jp="こんにちは、私は">Hello, I'm</p>
+                    <h1 class="hero-name animate-in delay-1">YE LYNN OO</h1>
+                    <p class="hero-tagline animate-in delay-2" 
+                       data-en="System Engineer"
+                       data-jp="システムエンジニア">
+                        System Engineer
+                    </p>
+                    <p class="hero-sub animate-in delay-3"
+                       data-en="I build with care, grow with every project, and give everything to what I create"
+                       data-jp="こだわりを持って作り、プロジェクトごとに成長し、作るものすべてに全力を尽くします">
+                        I build with care, grow with every project, and give everything to what I create
+                    </p>
+                    <div class="hero-actions animate-in delay-4">
+                        <a href="#contact" class="btn-primary" data-en="Get In Touch" data-jp="お問い合わせ">Get In Touch</a>
+                        <a href="#about" class="btn-ghost" data-en="Learn More" data-jp="もっと見る">Learn More</a>
+                    </div>
                 </div>
-                <div class="intro-image"> <img src="images/profile.jpg" alt="Your Photo">
+                <div class="hero-visual animate-in delay-2">
+                    <div class="profile-ring">
+                        <img src="img/profile.jpg" alt="Ye Lynn Oo" class="profile-img">
+                    </div>
+                    <div class="floating-badge badge-1"><i class="fab fa-java"></i> Java</div>
+                    <div class="floating-badge badge-2"><i class="fab fa-php"></i> PHP</div>
+                    <div class="floating-badge badge-3"><i class="fas fa-database"></i> MySQL</div>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <span data-en="Scroll" data-jp="スクロール">Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-label" data-en="01 — About Me" data-jp="01 — 私について">01 — About Me</div>
+                <h2 data-en="Who I Am" data-jp="私について">Who I Am</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p id="about-bio"
+                           data-en="I'm an international student enrolled in the System Engineer course at ECC Computer College Osaka, graduating in 2027. With roots across Myanmar, Nepal, and a multicultural upbringing, I bring a unique perspective to everything I build. I work with Java, PHP, HTML, CSS, JavaScript, and MySQL — and I'm always pushing to learn more. Beyond writing code, I've led team projects as project manager, handling planning documents and progress tracking, which has sharpened both my technical and collaborative skills. I believe great software is built at the intersection of careful thinking and relentless iteration."
+                           data-jp="私は大阪のECCコンピュータ専門学校のシステムエンジニアコースに在籍し、2027年3月卒業見込みです。ミャンマーとネパールにルーツを持ち、多文化な環境で育った経験が、開発への視点を豊かにしています。Java、PHP、HTML、CSS、JavaScript、MySQLを扱い、常に新しい技術を積極的に学んでいます。チームプロジェクトではプロジェクトマネージャーとして企画書や設計書の作成、進捗管理を担当し、技術力だけでなく、チームをまとめる力も磨いています。丁寧な思考と絶え間ない改善の積み重ねが、良いソフトウェアを生むと信じています。">
+                        </p>
+                    </div>
+                    <!-- <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-num">5</span>
+                            <span class="stat-label" data-en="Languages Spoken" data-jp="話せる言語">Languages Spoken</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">N2</span>
+                            <span class="stat-label" data-en="JLPT Certified" data-jp="JLPT認定">JLPT Certified</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">🏆</span>
+                            <span class="stat-label" data-en="Speech Contest Winner" data-jp="スピーチコンテスト最優秀賞">Speech Contest Winner</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">2027</span>
+                            <span class="stat-label" data-en="Graduating" data-jp="卒業見込み（新卒）">Graduating</span>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about-section full-width">
+        <!-- SKILLS -->
+        <section id="skills" class="skills-section">
             <div class="container">
-                <h2 data-en="About Me" data-jp="私について">About Me</h2>
-                <p id="about-bio" data-en="about_bio_en" data-jp="about_bio_jp">
-                </p>
-            </div>
-        </section>
-
-        <section id="skills" class="skills-section full-width">
-            <div class="container">
-                <h2 data-en="Skills" data-jp="スキル">Skills</h2>
+                <div class="section-label" data-en="02 — Skills" data-jp="02 — スキル">02 — Skills</div>
+                <h2 data-en="What I Work With" data-jp="使用技術">What I Work With</h2>
                 <div class="skills-grid">
-                    <div class="skill-item">
-                        <i class="fas fa-code"></i>
-                        <span data-en="HTML / CSS" data-jp="HTML / CSS">HTML / CSS</span>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <span class="skill-name" data-en="HTML / CSS" data-jp="HTML / CSS">HTML / CSS</span>
+                        <span class="skill-note" data-en="Responsive layouts" data-jp="レスポンシブ">Responsive layouts</span>
                     </div>
-                    <div class="skill-item">
-                        <i class="fas fa-laptop"></i>
-                        <span data-en="JavaScript" data-jp="JavaScript">JavaScript</span>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                        <span class="skill-name" data-en="JavaScript" data-jp="JavaScript">JavaScript</span>
+                        <span class="skill-note" data-en="DOM manipulation, ES6+" data-jp="DOM操作">DOM manipulation, ES6+</span>
                     </div>
-                    <div class="skill-item">
-                        <i class="fab fa-java"></i>
-                        <span data-en="Java" data-jp="Java">Java</span>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fab fa-java"></i></div>
+                        <span class="skill-name" data-en="Java" data-jp="Java">Java</span>
+                        <span class="skill-note" data-en="OOP, backend logic" data-jp="オブジェクト指向、バックエンド">OOP, backend logic</span>
                     </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database"></i>
-                        <span data-en="Database Management" data-jp="データベース管理">Database Management</span>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fab fa-php"></i></div>
+                        <span class="skill-name" data-en="PHP" data-jp="PHP">PHP</span>
+                        <span class="skill-note" data-en="Sessions, cookies, CRUD" data-jp="セッション、CRUD処理">Sessions, cookies, CRUD</span>
                     </div>
-                    <div class="skill-item">
-                        <i class="fab fa-git-alt"></i>
-                        <span data-en="Git Version Control" data-jp="Gitバージョン管理">Git Version Control</span>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <span class="skill-name" data-en="MySQL" data-jp="MySQL">MySQL</span>
+                        <span class="skill-note" data-en="Schema design, queries" data-jp="DB設計、クエリ">Schema design, queries</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                        <span class="skill-name" data-en="Git" data-jp="Git">Git</span>
+                        <span class="skill-note" data-en="Version control, GitHub" data-jp="バージョン管理、GitHub">Version control, GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Language section inside skills -->
+                <div class="lang-section">
+                    <h3 class="lang-title" data-en="Language Ability" data-jp="言語能力">Language Ability</h3>
+                    <div class="language-bars">
+                        <div class="lang-item">
+                            <div class="lang-meta">
+                                <span class="lang-name" data-en="Japanese" data-jp="日本語">Japanese</span>
+                                <span class="lang-level" data-en="JLPT N2" data-jp="JLPT N2">JLPT N2</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-meta">
+                                <span class="lang-name" data-en="English" data-jp="英語">English</span>
+                                <span class="lang-level" data-en="Fluent" data-jp="ビジネスレベル">Fluent</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-meta">
+                                <span class="lang-name" data-en="Myanmar" data-jp="ミャンマー語">Myanmar</span>
+                                <span class="lang-level" data-en="Native" data-jp="母語">Native</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-meta">
+                                <span class="lang-name" data-en="Nepali" data-jp="ネパール語">Nepali</span>
+                                <span class="lang-level" data-en="Fluent" data-jp="流暢">Fluent</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-meta">
+                                <span class="lang-name" data-en="Hindi" data-jp="ヒンディー語">Hindi</span>
+                                <span class="lang-level" data-en="Intermediate" data-jp="日常会話レベル">Intermediate</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="languages" class="languages-section full-width">
+        <!-- HIGHLIGHTS -->
+        <section id="highlights" class="highlights-section">
             <div class="container">
-                <h2 data-en="Language Ability" data-jp="言語能力">Language Ability</h2>
-                <div class="language-bars">
-                    <div class="lang-item">
-                        <span class="lang-name" data-en="Japanese" data-jp="日本語">Japanese</span>
-                        <div class="progress-bar">
-                            <div class="progress-fill advanced"><span data-en="JLPT N2 Certified"
-                                    data-jp="JLPT N2認定">JLPT N2 Certified</span></div>
-                        </div>
+                <div class="section-label" data-en="03 — Highlights" data-jp="03 — 実績">03 — Highlights</div>
+                <h2 data-en="Key Experiences" data-jp="主な経験">Key Experiences</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="hl-icon"><i class="fas fa-trophy"></i></div>
+                        <h3 data-en="Speech Contest" data-jp="スピーチコンテスト — 最優秀賞">Speech Contest</h3>
+                        <p data-en="Won Best Speaker at the Japanese Language School Speech Contest, demonstrating high-level Japanese communication and presentation ability."
+                           data-jp="日本語学校のスピーチコンテストで最優秀賞を受賞。高いレベルの日本語コミュニケーション力とプレゼンテーション力を示しました。">
+                           Won Best Speaker at the Japanese Language School Speech Contest, demonstrating high-level Japanese communication and presentation ability.
+                        </p>
                     </div>
-                    <div class="lang-item">
-                        <span class="lang-name" data-en="English" data-jp="英語">English</span>
-                        <div class="progress-bar">
-                            <div class="progress-fill fluent"><span data-en="Fluent" data-jp="流暢">Fluent</span></div>
-                        </div>
+                    <div class="highlight-card">
+                        <div class="hl-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3 data-en="Project Manager — Team Dev" data-jp="PM経験 — チーム開発">Project Manager — Team Dev</h3>
+                        <p data-en="Led a team project at ECC as Project Manager — authored planning and design documents, managed progress, and coordinated team communication to deliver on schedule."
+                           data-jp="ECCのチームプロジェクトでPMとして企画書・設計書を作成し、進捗管理とチームのコミュニケーション調整を担当して期日どおりに完成させました。">
+                           Led a team project at ECC as Project Manager — authored planning and design documents, managed progress, and coordinated team communication to deliver on schedule.
+                        </p>
                     </div>
-                    <div class="lang-item">
-                        <span class="lang-name" data-en="Myanmar" data-jp="ミャンマー語">Myanmar</span>
-                        <div class="progress-bar">
-                            <div class="progress-fill native"><span data-en="Native" data-jp="母語">Native</span></div>
-                        </div>
-                    </div>
-                    <div class="lang-item">
-                        <span class="lang-name" data-en="Nepali" data-jp="ネパール語">Nepali</span>
-                        <div class="progress-bar">
-                            <div class="progress-fill fluent"><span data-en="Fluent" data-jp="流暢">Fluent</span></div>
-                        </div>
-                    </div>
-                    <div class="lang-item">
-                        <span class="lang-name" data-en="Hindi" data-jp="ヒンディー語">Hindi</span>
-                        <div class="progress-bar">
-                            <div class="progress-fill intermediate"><span data-en="Intermediate"
-                                    data-jp="中級">Intermediate</span></div>
-                        </div>
+                    <div class="highlight-card">
+                        <div class="hl-icon"><i class="fas fa-globe-asia"></i></div>
+                        <h3 data-en="Multilingual — 5 Languages" data-jp="5言語対応">Multilingual — 5 Languages</h3>
+                        <p data-en="Fluent in Japanese (JLPT N2), English, Myanmar (native), Nepali, and Hindi — a rare combination that enables cross-cultural communication in diverse team environments."
+                           data-jp="日本語（JLPT N2）、英語、ミャンマー語（母語）、ネパール語、ヒンディー語に対応。多様なチーム環境での異文化コミュニケーションを可能にします。">
+                           Fluent in Japanese (JLPT N2), English, Myanmar (native), Nepali, and Hindi — a rare combination that enables cross-cultural communication in diverse team environments.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section id="projects" class="screenshots-section full-width">
+        <!-- SPEECH VIDEO -->
+        <section id="youtube" class="youtube-section">
             <div class="container">
-                <h2 data-en="Projects" data-jp="プロジェクト">Projects</h2>
-                <div class="screenshot-grid">
-                    <div class="project-card">
-                        <a href="projects/project1.png" target="_blank">
-                            <img src="projects/project1.png" alt="Project Screenshot 1">
-                        </a>
-                        <p class="project-name" data-en="Project One" data-jp="プロジェクト1"></p>
-                    </div>
-                    <div class="project-card">
-                        <img src="images/screenshot3.jpg" alt="Project Screenshot 3">
-                        <p class="project-name" data-en="Project Three" data-jp="プロジェクト3"></p>
-                    </div>
-                    <div class="project-card">
-                        <img src="images/screenshot2.jpg" alt="Project Screenshot 2">
-                        <p class="project-name" data-en="Project Two" data-jp="プロジェクト2"></p>
-                    </div>
-                    <div class="project-card">
-                        <img src="images/screenshot4.jpg" alt="Project Screenshot 4">
-                        <p class="project-name" data-en="Project Four" data-jp="プロジェクト4"></p>
-                    </div>
-                    <div class="project-card">
-                        <img src="images/screenshot5.jpg" alt="Project Screenshot 5">
-                        <p class="project-name" data-en="Project Five" data-jp="プロジェクト5"></p>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <section id="youtube" class="youtube-section full-width">
-            <div class="container">
-                <h2 data-en="Speech Contest Video" data-jp="スピーチコンテストの動画">My Speech Contest Video</h2>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9B15-qTmn60?si=7u-P_rVXUG5kT3Dq"
-                        title="YouTube video player" frameborder="0"
+                <div class="section-label" data-en="04 — Video" data-jp="04 — 動画">04 — Video</div>
+                <h2 data-en="Speech Contest Video" data-jp="スピーチコンテスト動画">Speech Contest Video</h2>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/9B15-qTmn60?si=7u-P_rVXUG5kT3Dq"
+                        title="Speech Contest Video" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-section full-width">
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section">
             <div class="container">
-                <h2 data-en="Contact Me" data-jp="連絡先">Contact Me</h2>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> <span data-en="Email:" data-jp="メール：">Email:</span> <a
-                            href="mailto:yelynnoo.dev@gmail.com">yelynnoo.dev@gmail.com</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> <span data-en="Location: Osaka, Japan"
-                            data-jp="住所：日本、大阪">Location: Osaka, Japan</span></p>
-                    <p><i class="fab fa-github"></i> <span data-en="GitHub:" data-jp="GitHub:">GitHub:</span> <a
-                            href="https://github.com/yelynnoo-dev" target="_blank">yelynnoo-dev</a></p>
+                <div class="section-label" data-en="05 — Contact" data-jp="05 — 連絡先">05 — Contact</div>
+                <h2 data-en="Get In Touch" data-jp="お問い合わせ">Get In Touch</h2>
+                <p class="contact-intro"
+                   data-en="I'm actively seeking new graduate engineer positions for 2027 Feel free to reach out"
+                   data-jp="2027年3月卒業予定の新卒エンジニア職を積極的に探しています 。 お気軽にご連絡ください。">
+                   I'm actively seeking new graduate engineer positions for 2027 Feel free to reach out
+                </p>
+                <div class="contact-cards">
+                    <a href="mailto:yelynnoo.dev@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <span class="cc-label" data-en="Email" data-jp="メール">Email</span>
+                        <span class="cc-value">yelynnoo.dev@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/yelynnoo-dev" target="_blank" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <span class="cc-label" data-en="GitHub" data-jp="GitHub">GitHub</span>
+                        <span class="cc-value">yelynnoo-dev</span>
+                    </a>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="cc-label" data-en="Location" data-jp="所在地">Location</span>
+                        <span class="cc-value" data-en="Osaka, Japan" data-jp="大阪、日本">Osaka, Japan</span>
+                    </div>
                 </div>
-                <a href="yelynnoo.pdf" download="yelynnoo.pdf" class="download-cv-btn" data-en="Resume" data-jp="履歴書">Download
-                    CV</a>
+                <a href="documents/履歴書_ECC_イェリンオー.pdf" download class="btn-primary cv-btn" data-en="Download Resume (PDF)" data-jp="履歴書をダウンロード">
+                    <i class="fas fa-download"></i> Download Resume (PDF)
+                </a>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-           <p>Copyright &copy; <span id="current-year"></span> <span data-en="YE LYNN OO - All Rights Reserved">YE LYNN OO - All Rights Reserved</span></p>
+        <div class="container footer-inner">
+            <p>Copyright &copy; <span id="current-year"></span> YE LYNN OO</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
